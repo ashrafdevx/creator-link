@@ -1,0 +1,60 @@
+// Toaster.jsx
+import { Toaster as SonnerToaster } from "sonner";
+
+export function Toaster() {
+  return (
+    <SonnerToaster
+      position="top-center"
+      richColors
+      closeButton
+      expand
+      duration={3500}
+      toastOptions={{
+        // optional: consistent styling knobs
+        classNames: {
+          toast: "rounded-md border shadow-lg",
+          title: "text-sm font-semibold",
+          description: "text-sm opacity-90",
+          actionButton:
+            "inline-flex h-8 items-center justify-center rounded-md border px-3 text-sm",
+          cancelButton:
+            "inline-flex h-8 items-center justify-center rounded-md border px-3 text-sm",
+        },
+      }}
+    />
+  );
+}
+
+// import { useToast } from "@/components/ui/use-toast";
+// import {
+//   Toast,
+//   ToastClose,
+//   ToastDescription,
+//   ToastProvider,
+//   ToastTitle,
+//   ToastViewport,
+// } from "@/components/ui/toast";
+
+// export function Toaster() {
+//   const { toasts } = useToast();
+
+//   return (
+//     <ToastProvider>
+//       {toasts.map(function ({ id, title, description, action, ...props }) {
+//         return (
+//           <Toast key={id} {...props}>
+//             <div className="grid gap-1">
+//               {title && <ToastTitle>{title}</ToastTitle>}
+//               {description && (
+//                 <ToastDescription>{description}</ToastDescription>
+//               )}
+//             </div>
+//             {action}
+//             <ToastClose />
+//           </Toast>
+//         );
+//       })}
+//       <ToastViewport />
+//     </ToastProvider>
+//   );
+// }
