@@ -8,11 +8,11 @@ export default defineConfig({
   server: {
     allowedHosts: true,
     hmr: {
-      port: 5174,
-      host: 'localhost',
+      port: 5000,
+      host: '0.0.0.0',
     },
-    port: 5174,
-    host: 'localhost',
+    port: 5000,
+    host: '0.0.0.0',
   },
   resolve: {
     alias: {
